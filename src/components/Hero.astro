@@ -1,0 +1,50 @@
+---
+import { Image } from "astro:assets";
+import heroImage from "../assets/hero.png";
+import Link from "../components/navbar/link.astro";
+// import { Icon } from "astro-icon";
+---
+
+<main
+  class="px-10 grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24"
+>
+  <div class="py-6 md:order-1 hidden md:block">
+    <Image
+      src={heroImage}
+      alt="Astronaut in the air"
+      width={300}
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avif"
+    />
+  </div>
+  <div>
+    <h1
+      class="text-white text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter"
+    >
+      Learn Algorithm in multiple coding languages
+    </h1>
+    <p class="text-lg mt-10 text-slate-600 max-w-xl">
+      An algorithm is a set of rules that takes in one or more inputs, then
+      performs inner calculations and data manipulations and returns an output
+      or a set of outputs. In short, algorithms make life easy. From complex
+      data manipulations and hashes, to simple arithmetic, algorithms follow a
+      set of steps to produce a useful result. One example of an algorithm would
+      be a simple function that takes two input values, adds them together, and
+      returns their sum.
+    </p>
+    <div class="mt-10 flex flex-col sm:flex-row gap-3">
+      <Link
+        size="lg"
+        style="outline"
+        rel="noopener"
+        href="https://github.com/zakarialabib/khawarizmiat"
+        class="flex gap-1 items-center justify-center"
+        target="_blank"
+      >
+        <!-- <Icon class="text-black w-4 h-4" name="bx:bxl-github" /> -->
+         GitHub Repo
+      </Link>
+    </div>
+  </div>
+</main>
